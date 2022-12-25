@@ -4,16 +4,17 @@ class App {
 
     constructor() {
         this.app = express();
+
         // this.loadMiddleware();
-        this.loadRoutes();
+        this.initRoutes();
 
     }
 
-    loadRoutes() {
+    initRoutes() {
 
     }
 
-    loadMiddleware() {
+    initMiddleware() {
 
     }
 
