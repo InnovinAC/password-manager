@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 import App from './App';
 import mongoose, {ConnectOptions} from 'mongoose';
 import ejs from 'ejs';
-const pejs = require('pejs');
-const views = pejs();
+// const pejs = require('pejs');
+// const views = pejs();
 
 
 
@@ -16,8 +16,8 @@ const options = {
     dbName: 'pswdMgrByInnovin'
 }
 
-App.set('view engine', 'ejs');
-App.set('views', './views')
+// App.set('view engine', 'ejs');
+// App.set('views', './views')
 App.listen(PORT, () => {
     console.log(`Server is now listening on port ${PORT}`);
 })
@@ -25,7 +25,7 @@ mongoose.set('strictQuery', true);
 mongoose.connect(MONGO_URI, options as ConnectOptions);
 
 mongoose.connection.once('open', () => {
-    console.log('Connected To MongoDB');
+    console.log('Connected To MongoDB via mongoose');
 });
 mongoose.connection.on('error', (err) => {
     console.error('Unable to connect to mongo db \n', err);

@@ -1,7 +1,7 @@
 import express from "express";
 import BaseResponseHandler from "./BaseResponseHandler";
 abstract class BaseController extends BaseResponseHandler {
-    public router: any;
+    public router;
 
     constructor() {
         super();

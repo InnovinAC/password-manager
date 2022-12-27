@@ -10,6 +10,9 @@ export const WebsiteSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    website_name: {
+        type: String
     }
 
 });
@@ -19,6 +22,7 @@ export interface IWebsite extends Document {
     username?: string;
     email?: string;
     password: string;
+    website_name: string;
 
 
 }
